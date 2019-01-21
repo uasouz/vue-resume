@@ -18,6 +18,11 @@ export default new Router({
       component: SkillsView,
     },
     // {
+    //   path: '/languages',
+    //   name: 'languages',
+    //   component: SkillsView,
+    // },
+    // {
     //   path: '/details/:id',
     //   name: 'details',
     //   props: true,

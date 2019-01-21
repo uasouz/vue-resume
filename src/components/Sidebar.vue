@@ -16,19 +16,23 @@
     <Contacts :mini="mini"/>
     <Options :mini="mini"/>
     <div class="bottom-icons">
-      <v-divider></v-divider>
-      <font-awesome-icon
-        :style="{ color: 'white' }"
-        class="fa-icon"
-        size="2x"
-        :icon="[ 'fab', 'github']"
-      />
-      <font-awesome-icon
-        :style="{ color: 'white' }"
-        class="fa-icon"
-        size="2x"
-        :icon="[ 'fab', 'linkedin']"
-      />
+      <!-- <v-divider></v-divider> -->
+      <v-btn icon href="https://github.com/uasouz" target="_blank">
+        <font-awesome-icon
+          :style="{ color: 'white' }"
+          class="fa-icon"
+          size="2x"
+          :icon="[ 'fab', 'github']"
+        />
+      </v-btn>
+      <v-btn icon href="http://www.linkedin.com/in/vinicius-lopes-90640542" target="_blank">
+        <font-awesome-icon
+          :style="{ color: 'white' }"
+          class="fa-icon"
+          size="2x"
+          :icon="[ 'fab', 'linkedin']"
+        />
+      </v-btn>
     </div>
   </v-navigation-drawer>
 </template>
@@ -59,14 +63,15 @@ export default class Sidebar extends Vue {
 
 <style lang="scss">
 .sidebar {
-  background-color: rgb(6, 92, 172) !important;
+  background-color: $primary !important;
 }
 .menu-btn-container-mini {
   text-align: center;
 }
 .bottom-icons {
   padding: 10px;
-  position: absolute;
+  background-color: $primary !important;
+  // position: fixed;
   text-align: center;
   width: 100%;
   bottom: 0px;

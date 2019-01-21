@@ -49,6 +49,6 @@ export default class UserTag extends Vue {
 <style lang="scss">
 .usertag {
   color: snow;
-  background-color: rgb(24, 49, 88);
+  background-color: $primaryDark;
 }
 </style>

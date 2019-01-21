@@ -46,13 +46,25 @@ export default class Options extends Vue {
   data() {
     return {
       options: [
-        { title: "Skills", link: "skills", iconprefix:'fab' ,icon: "superpowers" },
+
+        {
+          title: "Home",
+          iconprefix: "fas",
+          link: "home",
+          icon: "home"
+        },
+        {
+          title: "Skills",
+          link: "skills",
+          iconprefix: "fab",
+          icon: "superpowers"
+        },
         {
           title: "Languages",
-          iconprefix:'fas' ,
+          iconprefix: "fas",
           link: "languages",
           icon: "language"
-        }
+        },
         // {
         //   title: "LinkedIn",
         //   content: "www.linkedin.com/in/vinicius-lopes-90640542",

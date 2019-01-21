@@ -1,11 +1,11 @@
 <template>
   <div class="skill">
-    <v-card color="rgb(24, 64, 110)" class="skill-badge">
+    <v-card class="skill-badge">
       <h3 class="skill-badge-title">{{name}}</h3>
       <div class="level-sequence">
-        <div v-for="degree in level">
-          <div class="degree"></div>
-        </div>
+        <template  v-for="degree in level">
+          <div :key="degree" class="degree"></div>
+        </template>
       </div>
     </v-card>
   </div>
@@ -50,7 +50,7 @@ export default class SkillBadge extends Vue {
   // margin-left: 20px;
   width: 200px;
   height: 100px;
-  background: rgb(24, 64, 110);
+  background: $primaryDark !important;
 }
 
 // .skill-badge:before {
@@ -92,17 +92,17 @@ export default class SkillBadge extends Vue {
   z-index: 1;
   //   background-color: royalblue;
   border-left: 30px solid transparent;
-  border-right: 30px solid orange;
+  border-right: 30px solid $secondary;
   border-radius: 0% 0% 20% 0%;
   //   border-top: 30px solid orange;
   //   border-top-left-radius: 200%;
-  border-bottom: 100px solid orange;
+  border-bottom: 100px solid $secondary;
 }
 
 .skill-badge:hover {
   .skill-badge:after {
-    border-right: 30px solid orangered;
-    border-bottom: 100px solid orangered;
+    border-right: 30px solid $secondaryDark;
+    border-bottom: 100px solid $secondaryDark;
   }
 }
 
@@ -126,7 +126,7 @@ export default class SkillBadge extends Vue {
   height: 13.75px;
   margin-right: 2px;
   position: relative;
-  background-color: deepskyblue;
+  background-color: $primaryLight;
 }
 
 .degree:before {
@@ -138,7 +138,7 @@ export default class SkillBadge extends Vue {
   height: 0;
   border-left: 12.5px solid transparent;
   border-right: 12.5px solid transparent;
-  border-bottom: 6.25px solid deepskyblue;
+  border-bottom: 6.25px solid $primaryLight;
 }
 
 .degree:after {
@@ -150,6 +150,6 @@ export default class SkillBadge extends Vue {
   height: 0;
   border-left: 12.5px solid transparent;
   border-right: 12.5px solid transparent;
-  border-top: 6.25px solid deepskyblue;
+  border-top: 6.25px solid $primaryLight;
 }
 </style>
