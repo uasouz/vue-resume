@@ -50,7 +50,7 @@ export default class Options extends Vue {
         {
           title: "Home",
           iconprefix: "fas",
-          link: "home",
+          link: "/",
           icon: "home"
         },
         {
