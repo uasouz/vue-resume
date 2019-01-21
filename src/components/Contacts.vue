@@ -16,7 +16,7 @@
             </v-list-tile>
           </template>
         </v-list>
-        <v-divider></v-divider>
+        <v-divider dark></v-divider>
   </div>
 </template>
 

@@ -14,6 +14,22 @@
     </div>
     <UserTag :mini="mini"/>
     <Contacts :mini="mini"/>
+    <Options :mini="mini"/>
+    <div class="bottom-icons">
+      <v-divider></v-divider>
+      <font-awesome-icon
+        :style="{ color: 'white' }"
+        class="fa-icon"
+        size="2x"
+        :icon="[ 'fab', 'github']"
+      />
+      <font-awesome-icon
+        :style="{ color: 'white' }"
+        class="fa-icon"
+        size="2x"
+        :icon="[ 'fab', 'linkedin']"
+      />
+    </div>
   </v-navigation-drawer>
 </template>
 
@@ -21,8 +37,9 @@
 import { Component, Vue } from "vue-property-decorator";
 import UserTag from "./UserTag.vue";
 import Contacts from "./Contacts.vue";
+import Options from "./Options.vue";
 @Component({
-  components: { UserTag, Contacts }
+  components: { UserTag, Contacts, Options }
 })
 export default class Sidebar extends Vue {
   get menuBtnClass() {
@@ -46,5 +63,19 @@ export default class Sidebar extends Vue {
 }
 .menu-btn-container-mini {
   text-align: center;
+}
+.bottom-icons {
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+}
+.superpowers {
+  padding: 10px 16px;
+  text-align: center;
+}
+.bottom-icons .fa-icon {
+  margin: 5px;
 }
 </style>
