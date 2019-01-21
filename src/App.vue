@@ -1,22 +1,28 @@
 <template>
   <v-app>
     <v-toolbar app>
-      <v-btn 
-        icon v-if="$route.name !== 'home'"
-        @click="$router.go(-1) "
-      >
+      <v-btn icon v-if="$route.name !== 'home'" @click="$router.go(-1) ">
         <v-icon>arrow_back</v-icon>
       </v-btn>
-      <v-toolbar-title >
+      <v-toolbar-title>
         <span>Ma-Resume</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
 
+    <Sidebar/>
+
     <v-content>
       <router-view></router-view>
     </v-content>
-        <v-bottom-nav :active.sync="bottomNav" :value="true" absolute color="transparent">
+
+    <!-- <v-bottom-nav
+      :app="true"
+      :active.sync="bottomNav"
+      :value="true"
+      color="transparent"
+      :fixed="true"
+    >
       <v-btn color="teal" flat value="recent">
         <span>Recent</span>
         <v-icon>history</v-icon>
@@ -31,21 +37,23 @@
         <span>Nearby</span>
         <v-icon>place</v-icon>
       </v-btn>
-    </v-bottom-nav>
+    </v-bottom-nav> -->
   </v-app>
 </template>
 
 <script>
-import Home from './components/Home'
+import Home from "./components/Home";
+import Sidebar from "./components/Sidebar.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home
+    Home,
+    Sidebar
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>

@@ -1,14 +1,14 @@
 <template>
-  <div id="main">
-      <Skills/>
-  </div>
+  <v-layout id="main">
+      
+  </v-layout>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Skills from '../components/Skills.vue'
+// import Sidebar from '../components/Sidebar.vue'
 @Component({
-  components: {Skills}
+  components: {}
 })
 export default class Main extends Vue {
 
@@ -21,6 +21,6 @@ export default class Main extends Vue {
 <style lang="scss">
 #main{
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 </style>

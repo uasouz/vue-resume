@@ -1,6 +1,6 @@
 <template>
   <div class="skill">
-    <v-card class="skill-badge">
+    <v-card color="rgb(24, 64, 110)" class="skill-badge">
       <h3 class="skill-badge-title">{{name}}</h3>
       <div class="level-sequence">
         <div v-for="degree in level">

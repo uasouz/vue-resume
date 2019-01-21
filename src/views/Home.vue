@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
-    <Main/>
-  </div>
+  <v-layout wrap fill-height fill-width>
+    <v-flex wrap>
+      <div class="home">
+        <Main/>
+      </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script lang="ts">
@@ -16,3 +20,14 @@ import Main from "./Main.vue";
 })
 export default class Home extends Vue {}
 </script>
+
+<style lang="scss">
+.home {
+  height: 100%;
+  overflow: auto;
+}
+html {
+  overflow: hidden;
+}
+</style>
+
