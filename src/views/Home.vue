@@ -1,11 +1,13 @@
 <template>
-  <v-layout wrap fill-height fill-width>
-    <v-flex wrap>
-      <div class="home">
-        <Main/>
-      </div>
-    </v-flex>
-  </v-layout>
+  <v-container fluid>
+    <v-layout wrap fill-height fill-width>
+      <v-flex wrap>
+        <div class="home">
+          <Main/>
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,4 @@
 <template>
-  <div class="skill">
     <v-card class="skill-badge">
       <h3 class="skill-badge-title">{{name}}</h3>
       <div class="level-sequence">
@@ -8,7 +7,6 @@
         </template>
       </div>
     </v-card>
-  </div>
 </template>
 
 <script lang="ts">

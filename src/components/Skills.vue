@@ -1,12 +1,10 @@
 <template>
   <div id="skills">
-    <v-container>
-      <v-layout align-start justify-center row fill-height>
-        <v-flex>
-            <SkillBadge v-for="skill in skills" :name="skill.name" :level="skill.level"></SkillBadge>
-        </v-flex>
-      </v-layout>
-    </v-container>
+    <v-list>
+      <template v-for="skill in skills">
+        <SkillBadge :key="skill.name" :name="skill.name" :level="skill.level"></SkillBadge>
+      </template>
+    </v-list>
   </div>
 </template>
 
