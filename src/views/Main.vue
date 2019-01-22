@@ -1,24 +1,23 @@
 <template>
-  <v-layout id="main">
-    <v-list class="timeline">
-      <template v-for="event in events">
-        <v-list-tile @click="$router.push(event.link)" :key="event.title" avatar>
-          <v-list-tile-avatar>
-            <!-- <v-icon :key="event.icon">{{event.icon}}</v-icon> -->
-            <font-awesome-icon
-              class="fa-icon"
-              size="2x"
-              :key="event.tile"
-              :icon="[ event.iconprefix, event.icon ]"
-            />
-          </v-list-tile-avatar>
-          <v-list-tile-content>
-            <v-list-tile-title v-html="event.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </template>
-    </v-list>
-  </v-layout>
+  <v-container>
+    <v-layout id="main">
+      <v-timeline dense class="timeline">
+        <v-timeline-item fill-dot small :key="event.title" v-for="event in events">
+          <v-card @click="$router.push(event.link)" :key="event.title">
+            <v-card-title class="headline">
+              <font-awesome-icon
+                class="fa-icon"
+                :key="event.tile"
+                :icon="[ event.iconprefix, event.icon ]"
+              />
+              <h5 class="headline">{{event.title}}</h5>
+            </v-card-title>
+            <v-card-text>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+    </v-layout>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -31,9 +30,9 @@ export default class Main extends Vue {
   data() {
     return {
       events: [
-        { title: "Nascimento", link: "bio", iconprefix:"fas" ,icon: "baby" },
-        { title: "Escola", link: "bio", iconprefix:"fas", icon: "book" },
-        { title: "Trabalho", link: "bio", iconprefix:"fas", icon: "briefcase" }
+        { title: "Nascimento", link: "bio", iconprefix: "fas", icon: "baby" },
+        { title: "Escola", link: "bio", iconprefix: "fas", icon: "book" },
+        { title: "Trabalho", link: "bio", iconprefix: "fas", icon: "briefcase" }
       ]
     };
   }
@@ -46,33 +45,9 @@ export default class Main extends Vue {
   height: 100%;
 }
 
-$spacing: 50px;
-$radius: 4px;
-
-$date: 120px;
-$dotborder: 4px;
-$dot: 11px;
-$line: 4px;
-
-$font-title: 'Saira', sans-serif;
-$font-text: 'Chivo', sans-serif;
-
-.timeline {
-  border-left: $line solid $primary;
-  border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;    
-  background: fade($primaryLight, 3%);
-  color: fade(white, 80%);
-  font-family: $font-text;  
-  margin: $spacing auto;  
-  letter-spacing: 0.5px;   
-  position: relative;
-  line-height: 1.4em;
-  font-size: 1.03em;   
-  padding: $spacing;   
-  list-style: none;
-  text-align: left;  
-  font-weight: 100;  
-  max-width: 30%; 
-  }
+// .timeline .fa-icon {
+//   position: absolute;
+//   right: 0;
+//   margin: 3%;
+// }
 </style>

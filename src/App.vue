@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Sidebar from "./components/Sidebar.vue";
 export default {
   name: "App",
   components: {
-    Home,
+    // Home,
     Sidebar
   },
   data() {

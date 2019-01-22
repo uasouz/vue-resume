@@ -26,8 +26,8 @@ export default class Home extends Vue {}
   height: 100%;
   overflow: auto;
 }
-html {
-  overflow: hidden;
-}
+// html {
+//   overflow: hidden;
+// }
 </style>
 
