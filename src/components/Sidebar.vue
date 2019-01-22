@@ -48,9 +48,9 @@ import Options from "./Options.vue";
 export default class Sidebar extends Vue {
   get menuBtnClass() {
     if (this.$data.mini) {
-      return `.menu-btn-container-mini`;
+      return `menu-btn-container-mini`;
     }
-    return `.menu-btn-container`;
+    return `menu-btn-container`;
   }
 
   data() {
