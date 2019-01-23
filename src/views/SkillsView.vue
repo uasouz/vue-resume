@@ -1,17 +1,16 @@
 <template>
   <v-layout id="skills-view">
-      <Skills/>
+    <Skills/>
   </v-layout>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Skills from '../components/Skills.vue'
+import Skills from "../components/Skillsv2.vue";
 @Component({
-  components: {Skills}
+  components: { Skills }
 })
 export default class SkillsView extends Vue {
-
   data() {
     return {};
   }
@@ -19,8 +18,8 @@ export default class SkillsView extends Vue {
 </script>
 
 <style lang="scss">
-#skills-view{
-    width: 100%;
-    height: 100%;
+#skills-view {
+  width: 100%;
+  height: 100%;
 }
 </style>

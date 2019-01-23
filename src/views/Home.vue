@@ -1,10 +1,12 @@
 <template>
-  <v-container fluid>
-    <v-layout wrap fill-height fill-width>
-      <v-flex wrap>
-        <div class="home">
+  <v-container fluid class="home">
+    <v-layout column fluid fill-width>
+
+      <v-flex>
+          <Skills/>
+      </v-flex>
+      <v-flex>
           <Main/>
-        </div>
       </v-flex>
     </v-layout>
   </v-container>
@@ -13,11 +15,13 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Main from "./Main.vue";
+import Skills from "../components/Skillsv2.vue"
 // import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    Main
+    Main,
+    Skills
   }
 })
 export default class Home extends Vue {}
