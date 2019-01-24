@@ -1,8 +1,8 @@
 <template>
   <div class="skills">
     <v-container fluid grid-list-xl>
-      <v-layout class="sp-flex-layout" fluid row>
-        <v-flex class="skill-progress" :key="skill.name" v-for="skill in skills">
+      <v-layout class="sp-flex-layout" fluid :column="isSmallScreen" :row="!isSmallScreen" wrap>
+        <v-flex xs2 class="skill-progress" :key="skill.name" v-for="skill in skills">
           <h2>{{skill.name}}</h2>
           <v-progress-circular color="teal" size="100" width="10" :value="skill.level">
             <span :class="`font-weight-bold`">{{skill.level.toFixed(2)}}%</span>
@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue,Prop } from "vue-property-decorator";
 import SkillBadge from "./SkillBadge.vue";
 
 @Component({
@@ -23,6 +23,8 @@ import SkillBadge from "./SkillBadge.vue";
 })
 export default class Skillsv2 extends Vue {
   skills: any[];
+  @Prop({ default: false })
+  isSmallScreen: boolean;
   data() {
     return {
       skills: [
@@ -47,32 +49,32 @@ export default class Skillsv2 extends Vue {
 </script>
 
 <style lang="scss">
-.skills {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+// .skills {
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   white-space: nowrap;
 
-}
+// }
 
-.skills ::-webkit-scrollbar {
-  width: 0;
-  display: inline !important;
-}
+// .skills ::-webkit-scrollbar {
+//   width: 0;
+//   display: inline !important;
+// }
 
 .skill-progress {
   text-align: center;
   // display: inline-block;
 }
 
-.sp-flex-layout {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  .skill-progress {
-    flex: 0 0 auto;
-  }
-    &::-webkit-scrollbar {
-    display: none;
-  }
-}
+// .sp-flex-layout {
+//   display: flex;
+//   flex-wrap: nowrap;
+//   overflow-x: auto;
+//   .skill-progress {
+//     flex: 0 0 auto;
+//   }
+//     &::-webkit-scrollbar {
+//     display: none;
+//   }
+// }
 </style>

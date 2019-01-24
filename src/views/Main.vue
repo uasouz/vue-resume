@@ -5,7 +5,7 @@
       <h1>Work Experience</h1>
     </div>
     <v-timeline :dense="isDenseTimeline" class="timeline">
-      <v-timeline-item fill-dot small :key="event.title" v-for="event in events">
+      <v-timeline-item fill-dot small color="orange" :key="event.title" v-for="event in events">
         <span
           slot="opposite"
           :class="`headline font-weight-bold`"
@@ -18,13 +18,8 @@
         <span slot="opposite" :class="`headline font-weight-bold`" v-else>Now</span>
         <v-card class="card" @click="$router.push(event.link)" :key="event.title">
           <v-card-title class="title">
-            <!-- <font-awesome-icon
-              class="fa-icon"
-              :key="event.tile"
-              :icon="[ event.iconprefix, event.icon ]"
-            />-->
-            <h5 class="headline">{{event.title}}</h5>
-            <span class="subheading">{{event.role}}</span>
+            <h5 class="headline">{{event.title}} </h5>
+            <span class="subheading"> as {{event.role}}</span>
           </v-card-title>
           <v-card-text>{{event.description}}</v-card-text>
         </v-card>
@@ -165,7 +160,7 @@ export default class Main extends Vue {
 }
 
 .timeline .card .title {
-  background-color: $secondary;
-  // color: snow;
+  background-color: $primary;
+  color: snow;
 }
 </style>

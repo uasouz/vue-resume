@@ -10,7 +10,7 @@
       <v-spacer></v-spacer>
     </v-toolbar> -->
 
-    <Sidebar/>
+    <!-- <Sidebar/> -->
 
     <v-content>
       <router-view></router-view>
@@ -43,12 +43,12 @@
 
 <script>
 // import Home from "./components/Home";
-import Sidebar from "./components/Sidebar.vue";
+// import Sidebar from "./components/Sidebar.vue";
 export default {
   name: "App",
   components: {
     // Home,
-    Sidebar
+    // Sidebar
   },
   data() {
     return {
